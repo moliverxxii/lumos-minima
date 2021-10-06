@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name lumos_minima)(type KiCad)(uri ${KIPRJMOD}/lumos-minima.pretty)(options "")(descr ""))
+)
