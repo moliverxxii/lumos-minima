@@ -1,0 +1,163 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32L4:STM32L451RETx U1
+U 1 1 61570DC1
+P 4250 3850
+F 0 "U1" H 4200 1961 50  0000 C CNN
+F 1 "STM32L451RETx" H 4200 1870 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 3650 2150 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340475.pdf" H 4250 3850 50  0001 C CNN
+	1    4250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 61575230
+P 2300 3200
+F 0 "Y?" V 2346 3069 50  0000 R CNN
+F 1 "LFXTAL003240" V 2255 3069 50  0000 R CNN
+F 2 "" H 2300 3200 50  0001 C CNN
+F 3 "~" H 2300 3200 50  0001 C CNN
+	1    2300 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 615763F7
+P 2100 2950
+F 0 "C?" V 2352 2950 50  0000 C CNN
+F 1 "C" V 2261 2950 50  0000 C CNN
+F 2 "" H 2138 2800 50  0001 C CNN
+F 3 "~" H 2100 2950 50  0001 C CNN
+	1    2100 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 615771CF
+P 2100 3450
+F 0 "C?" V 1848 3450 50  0000 C CNN
+F 1 "C" V 1939 3450 50  0000 C CNN
+F 2 "" H 2138 3300 50  0001 C CNN
+F 3 "~" H 2100 3450 50  0001 C CNN
+	1    2100 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 3450 2300 3450
+Wire Wire Line
+	2300 3450 2300 3350
+Wire Wire Line
+	2250 2950 2300 2950
+Wire Wire Line
+	2300 2950 2300 3050
+Wire Wire Line
+	3550 3350 3000 3350
+Wire Wire Line
+	3000 3350 3000 2950
+Wire Wire Line
+	3000 2950 2300 2950
+Connection ~ 2300 2950
+Wire Wire Line
+	2300 3450 3550 3450
+Connection ~ 2300 3450
+$Comp
+L power:GND #PWR?
+U 1 1 61580AC1
+P 1900 3500
+F 0 "#PWR?" H 1900 3250 50  0001 C CNN
+F 1 "GND" H 1905 3327 50  0000 C CNN
+F 2 "" H 1900 3500 50  0001 C CNN
+F 3 "" H 1900 3500 50  0001 C CNN
+	1    1900 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3500 1900 3450
+Wire Wire Line
+	1900 3450 1950 3450
+$Comp
+L power:GND #PWR?
+U 1 1 615812FD
+P 1900 3000
+F 0 "#PWR?" H 1900 2750 50  0001 C CNN
+F 1 "GND" H 1905 2827 50  0000 C CNN
+F 2 "" H 1900 3000 50  0001 C CNN
+F 3 "" H 1900 3000 50  0001 C CNN
+	1    1900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3000 1900 2950
+Wire Wire Line
+	1900 2950 1950 2950
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 61581CF0
+P 1650 1700
+F 0 "BT?" H 1768 1796 50  0000 L CNN
+F 1 "Battery_Cell" H 1768 1705 50  0000 L CNN
+F 2 "" V 1650 1760 50  0001 C CNN
+F 3 "~" V 1650 1760 50  0001 C CNN
+	1    1650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4001 D?
+U 1 1 61584751
+P 2600 1650
+F 0 "D?" H 2600 1434 50  0000 C CNN
+F 1 "1N4001" H 2600 1525 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2600 1475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2600 1650 50  0001 C CNN
+	1    2600 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Motor:Motor_DC M?
+U 1 1 6158854F
+P 6800 2500
+F 0 "M?" H 6958 2496 50  0000 L CNN
+F 1 "Motor_DC" H 6958 2405 50  0000 L CNN
+F 2 "" H 6800 2410 50  0001 C CNN
+F 3 "~" H 6800 2410 50  0001 C CNN
+	1    6800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M?
+U 1 1 61588AD4
+P 7850 2500
+F 0 "M?" H 8008 2496 50  0000 L CNN
+F 1 "Motor_DC" H 8008 2405 50  0000 L CNN
+F 2 "" H 7850 2410 50  0001 C CNN
+F 3 "~" H 7850 2410 50  0001 C CNN
+	1    7850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder SW?
+U 1 1 61589C24
+P 6000 2800
+F 0 "SW?" H 6230 2846 50  0000 L CNN
+F 1 "Rotary_Encoder" H 6230 2755 50  0000 L CNN
+F 2 "" H 5850 2960 50  0001 C CNN
+F 3 "~" H 6000 3060 50  0001 C CNN
+	1    6000 2800
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
