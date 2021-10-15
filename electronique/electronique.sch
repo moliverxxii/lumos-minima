@@ -81,7 +81,7 @@ U 1 1 61581CF0
 P 1550 1300
 F 0 "BT1" H 1668 1396 50  0000 L CNN
 F 1 "7.2V" H 1668 1305 50  0000 L CNN
-F 2 "" V 1550 1360 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical" V 1550 1360 50  0001 C CNN
 F 3 "~" V 1550 1360 50  0001 C CNN
 	1    1550 1300
 	-1   0    0    -1  
@@ -358,7 +358,7 @@ U 1 1 616E3C3F
 P 1000 1300
 F 0 "J1" H 1080 1292 50  0000 L CNN
 F 1 "Conn_01x02" H 1080 1201 50  0000 L CNN
-F 2 "" H 1000 1300 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 1000 1300 50  0001 C CNN
 F 3 "~" H 1000 1300 50  0001 C CNN
 	1    1000 1300
 	-1   0    0    1   
@@ -380,7 +380,7 @@ U 1 1 61707699
 P 6900 900
 F 0 "J3" H 6980 892 50  0000 L CNN
 F 1 "Camera" H 6980 801 50  0000 L CNN
-F 2 "" H 6900 900 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6900 900 50  0001 C CNN
 F 3 "~" H 6900 900 50  0001 C CNN
 	1    6900 900 
 	1    0    0    -1  
@@ -391,7 +391,7 @@ U 1 1 6172D461
 P 8250 4700
 F 0 "J5" H 8330 4692 50  0000 L CNN
 F 1 "Conn_01x06" H 8330 4601 50  0000 L CNN
-F 2 "" H 8250 4700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8250 4700 50  0001 C CNN
 F 3 "~" H 8250 4700 50  0001 C CNN
 	1    8250 4700
 	1    0    0    -1  
@@ -933,7 +933,7 @@ U 1 1 61BFF1B5
 P 7850 3450
 F 0 "J4" H 7900 3867 50  0000 C CNN
 F 1 "TOF1" H 7900 3776 50  0000 C CNN
-F 2 "" H 7850 3450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 7850 3450 50  0001 C CNN
 F 3 "~" H 7850 3450 50  0001 C CNN
 	1    7850 3450
 	1    0    0    -1  
@@ -1361,17 +1361,6 @@ Wire Wire Line
 	6050 2600 6450 2600
 Wire Wire Line
 	4750 1600 4550 1600
-$Comp
-L MCU_ST_STM32L4:STM32L451RETx U3
-U 1 1 61570DC1
-P 5450 3200
-F 0 "U3" H 5400 1311 50  0000 C CNN
-F 1 "STM32L451RETx" H 5400 1220 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4850 1500 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340475.pdf" H 5450 3200 50  0001 C CNN
-	1    5450 3200
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7650 3650
 NoConn ~ 8150 3650
 NoConn ~ 7650 3250
@@ -1792,4 +1781,15 @@ NoConn ~ 6050 1700
 NoConn ~ 6050 1600
 NoConn ~ 4750 2900
 NoConn ~ 3900 5200
+$Comp
+L MCU_ST_STM32L4:STM32L451RETx U3
+U 1 1 61570DC1
+P 5450 3200
+F 0 "U3" H 5400 1311 50  0000 C CNN
+F 1 "STM32L451RETx" H 5400 1220 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4850 1500 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340475.pdf" H 5450 3200 50  0001 C CNN
+	1    5450 3200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
