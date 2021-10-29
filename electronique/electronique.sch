@@ -1524,17 +1524,6 @@ Wire Wire Line
 Wire Wire Line
 	1900 3800 1900 3750
 $Comp
-L Device:Ferrite_Bead_Small FB1
-U 1 1 618BB3A4
-P 3050 3500
-F 0 "FB1" V 2905 3500 50  0000 C CNN
-F 1 "Ferrite_Bead_Small" V 2904 3500 50  0001 C CNN
-F 2 "Ferrite_THT:LairdTech_28C0236-0JW-10" V 2980 3500 50  0001 C CNN
-F 3 "~" H 3050 3500 50  0001 C CNN
-	1    3050 3500
-	0    1    1    0   
-$EndComp
-$Comp
 L power:+3.3V #PWR09
 U 1 1 618E3A86
 P 2800 3500
@@ -1545,8 +1534,6 @@ F 3 "" H 2800 3500 50  0001 C CNN
 	1    2800 3500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 3500 2950 3500
 $Comp
 L Device:C C8
 U 1 1 6190E7EE
@@ -1576,8 +1563,6 @@ $EndComp
 Wire Wire Line
 	3400 3550 3400 3500
 Connection ~ 3400 3500
-Wire Wire Line
-	3400 3500 3150 3500
 Wire Wire Line
 	3750 3850 3750 3900
 Wire Wire Line
@@ -1927,4 +1912,6 @@ $EndComp
 Connection ~ 2250 1650
 Wire Wire Line
 	2250 1650 2400 1650
+Wire Wire Line
+	2800 3500 3400 3500
 $EndSCHEMATC
