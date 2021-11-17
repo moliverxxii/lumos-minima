@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:electronique-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -374,14 +373,14 @@ F 3 "~" H 8550 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x06 J3
+L Connector_Generic:Conn_01x08 J3
 U 1 1 61707699
-P 6900 900
-F 0 "J3" H 6980 892 50  0000 L CNN
-F 1 "Camera" H 6980 801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 6900 900 50  0001 C CNN
-F 3 "~" H 6900 900 50  0001 C CNN
-	1    6900 900 
+P 6900 1000
+F 0 "J3" H 6980 992 50  0000 L CNN
+F 1 "Camera" H 6980 901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6900 1000 50  0001 C CNN
+F 3 "~" H 6900 1000 50  0001 C CNN
+	1    6900 1000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -430,7 +429,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 5800 8050 5800
 Text Label 8050 5900 0    50   ~ 0
-TRIG_US
+TRIG1
 Text Label 8050 5800 0    50   ~ 0
 ECHO1
 $Comp
@@ -528,17 +527,17 @@ Wire Wire Line
 Text Label 10150 5800 0    50   ~ 0
 ECHO3
 Text Label 9100 5900 0    50   ~ 0
-TRIG_US
+TRIG2
 Text Label 10150 5900 0    50   ~ 0
-TRIG_US
-Text Label 6450 2400 2    50   ~ 0
-ECHO1
+TRIG3
 Text Label 6450 2500 2    50   ~ 0
+ECHO1
+Text Label 6450 2600 2    50   ~ 0
 ECHO2
 Text Label 6450 2700 2    50   ~ 0
 ECHO3
-Text Label 6450 2600 2    50   ~ 0
-TRIG_US
+Text Label 6450 2400 2    50   ~ 0
+TRIG3
 $Comp
 L power:GND #PWR046
 U 1 1 6186A235
@@ -886,25 +885,14 @@ L power:GND #PWR023
 U 1 1 61B01E9A
 P 6200 1100
 F 0 "#PWR023" H 6200 850 50  0001 C CNN
-F 1 "GND" V 6205 972 50  0000 R CNN
+F 1 "GND" V 6150 950 50  0000 R CNN
 F 2 "" H 6200 1100 50  0001 C CNN
 F 3 "" H 6200 1100 50  0001 C CNN
 	1    6200 1100
 	0    1    1    0   
 $EndComp
-$Comp
-L power:+5V #PWR024
-U 1 1 61B03756
-P 6400 1200
-F 0 "#PWR024" H 6400 1050 50  0001 C CNN
-F 1 "+5V" H 6415 1373 50  0000 C CNN
-F 2 "" H 6400 1200 50  0001 C CNN
-F 3 "" H 6400 1200 50  0001 C CNN
-	1    6400 1200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	6400 1200 6700 1200
+	6200 1200 6700 1200
 Text Label 4350 4300 0    50   ~ 0
 SCK
 Text Label 6450 3100 2    50   ~ 0
@@ -1182,8 +1170,6 @@ F 3 "" H 5000 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5000 5150 5000 5050
-Wire Wire Line
-	5000 5050 5150 5050
 Connection ~ 5450 5050
 Wire Wire Line
 	5450 5050 5550 5050
@@ -1333,9 +1319,9 @@ Wire Wire Line
 Wire Wire Line
 	6450 3400 6050 3400
 Wire Wire Line
-	6050 2500 6450 2500
+	6050 2600 6450 2600
 Wire Wire Line
-	6050 2400 6450 2400
+	6050 2500 6450 2500
 Wire Wire Line
 	6450 2200 6050 2200
 Wire Wire Line
@@ -1345,9 +1331,9 @@ Wire Wire Line
 Wire Wire Line
 	6050 2900 6450 2900
 Wire Wire Line
-	6050 2700 6450 2700
+	6050 2400 6450 2400
 Wire Wire Line
-	6050 2600 6450 2600
+	6050 2700 6450 2700
 Wire Wire Line
 	4750 1600 4550 1600
 NoConn ~ 7650 3650
@@ -1622,13 +1608,7 @@ Wire Wire Line
 	5550 1250 5550 1400
 NoConn ~ 4750 3900
 NoConn ~ 4750 4000
-NoConn ~ 4750 4100
-NoConn ~ 4750 4200
 NoConn ~ 4750 4600
-NoConn ~ 4750 4700
-NoConn ~ 4750 4800
-NoConn ~ 6050 4800
-NoConn ~ 6050 4500
 NoConn ~ 6050 3700
 NoConn ~ 6050 3600
 NoConn ~ 6050 2800
@@ -1637,17 +1617,6 @@ NoConn ~ 6050 2000
 NoConn ~ 6050 1900
 NoConn ~ 6050 1800
 NoConn ~ 4750 2900
-$Comp
-L MCU_ST_STM32L4:STM32L451RETx U5
-U 1 1 61570DC1
-P 5450 3200
-F 0 "U5" H 5400 1311 50  0000 C CNN
-F 1 "STM32L451RETx" H 5400 1220 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4850 1500 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340475.pdf" H 5450 3200 50  0001 C CNN
-	1    5450 3200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9450 1050 9550 1050
 Wire Wire Line
@@ -1915,4 +1884,136 @@ Wire Wire Line
 	2250 1650 2400 1650
 Wire Wire Line
 	2800 3500 3400 3500
+Wire Wire Line
+	6700 1300 6250 1300
+Wire Wire Line
+	6700 1400 6250 1400
+$Comp
+L power:+5V #PWR024
+U 1 1 61B03756
+P 6200 1200
+F 0 "#PWR024" H 6200 1050 50  0001 C CNN
+F 1 "+5V" V 6200 1400 50  0000 C CNN
+F 2 "" H 6200 1200 50  0001 C CNN
+F 3 "" H 6200 1200 50  0001 C CNN
+	1    6200 1200
+	0    -1   -1   0   
+$EndComp
+Text Label 6250 1300 0    50   ~ 0
+SDA
+Text Label 6250 1400 0    50   ~ 0
+SCL
+Text Label 4350 4200 0    50   ~ 0
+TRIG2
+Wire Wire Line
+	4750 4200 4350 4200
+Text Label 4350 4100 0    50   ~ 0
+TRIG1
+Wire Wire Line
+	4750 4100 4350 4100
+$Comp
+L Device:R R13
+U 1 1 61ADCF63
+P 3400 4850
+F 0 "R13" H 3470 4896 50  0000 L CNN
+F 1 "R" H 3470 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3330 4850 50  0001 C CNN
+F 3 "~" H 3400 4850 50  0001 C CNN
+	1    3400 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 61B1004B
+P 3400 5500
+F 0 "#PWR053" H 3400 5250 50  0001 C CNN
+F 1 "GND" H 3405 5327 50  0000 C CNN
+F 2 "" H 3400 5500 50  0001 C CNN
+F 3 "" H 3400 5500 50  0001 C CNN
+	1    3400 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5000 3400 5100
+Wire Wire Line
+	3400 4700 3400 4550
+Text Label 3400 4550 0    50   ~ 0
+AXELED
+$Comp
+L Device:R R12
+U 1 1 61BC712A
+P 2900 4850
+F 0 "R12" H 2970 4896 50  0000 L CNN
+F 1 "R" H 2970 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 4850 50  0001 C CNN
+F 3 "~" H 2900 4850 50  0001 C CNN
+	1    2900 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR052
+U 1 1 61BC7130
+P 2900 5500
+F 0 "#PWR052" H 2900 5250 50  0001 C CNN
+F 1 "GND" H 2905 5327 50  0000 C CNN
+F 2 "" H 2900 5500 50  0001 C CNN
+F 3 "" H 2900 5500 50  0001 C CNN
+	1    2900 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 5000 2900 5100
+Wire Wire Line
+	2900 4700 2900 4550
+Text Label 2900 4550 0    50   ~ 0
+DERBALED
+Wire Wire Line
+	6050 4500 6550 4500
+Text Label 6550 4500 2    50   ~ 0
+DERBALED
+Wire Wire Line
+	5000 5050 5150 5050
+Text Label 6450 4800 2    50   ~ 0
+AXELED
+$Comp
+L MCU_ST_STM32L4:STM32L451RETx U5
+U 1 1 61570DC1
+P 5450 3200
+F 0 "U5" H 5400 1311 50  0000 C CNN
+F 1 "STM32L451RETx" H 5400 1220 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 4850 1500 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340475.pdf" H 5450 3200 50  0001 C CNN
+	1    5450 3200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4750 4700
+Wire Wire Line
+	6050 4800 6450 4800
+NoConn ~ 4750 4800
+Wire Wire Line
+	3400 5400 3400 5500
+$Comp
+L Device:LED D3
+U 1 1 61ADBA9B
+P 3400 5250
+F 0 "D3" V 3439 5132 50  0000 R CNN
+F 1 "LED2" V 3348 5132 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3400 5250 50  0001 C CNN
+F 3 "~" H 3400 5250 50  0001 C CNN
+	1    3400 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 5400 2900 5500
+$Comp
+L Device:LED D2
+U 1 1 61BC7124
+P 2900 5250
+F 0 "D2" V 2939 5132 50  0000 R CNN
+F 1 "LED1" V 2848 5132 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2900 5250 50  0001 C CNN
+F 3 "~" H 2900 5250 50  0001 C CNN
+	1    2900 5250
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
