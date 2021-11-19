@@ -823,16 +823,16 @@ Wire Wire Line
 $Comp
 L Device:R R2
 U 1 1 61A15103
-P 7150 5000
-F 0 "R2" V 6943 5000 50  0000 C CNN
-F 1 "330k" V 7034 5000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7080 5000 50  0001 C CNN
-F 3 "~" H 7150 5000 50  0001 C CNN
-	1    7150 5000
+P 7200 5000
+F 0 "R2" V 6993 5000 50  0000 C CNN
+F 1 "330k" V 7084 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7130 5000 50  0001 C CNN
+F 3 "~" H 7200 5000 50  0001 C CNN
+	1    7200 5000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7300 5000 8050 5000
+	7350 5000 8050 5000
 Wire Wire Line
 	8000 4500 8050 4500
 Connection ~ 8000 4500
@@ -856,10 +856,8 @@ Text Label 6450 3400 2    50   ~ 0
 LED_B
 Text Label 6450 3500 2    50   ~ 0
 LED_C
-Text Label 6450 5000 0    50   ~ 0
+Text Label 7450 5000 0    50   ~ 0
 PHOTOD_COUL
-Wire Wire Line
-	6450 5000 7000 5000
 Text Label 4200 3800 0    50   ~ 0
 PHOTOD_COUL
 Wire Wire Line
@@ -2016,4 +2014,19 @@ F 3 "~" H 2900 5250 50  0001 C CNN
 	1    2900 5250
 	0    -1   -1   0   
 $EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61AC3352
+P 6900 5050
+F 0 "#PWR?" H 6900 4800 50  0001 C CNN
+F 1 "GND" H 6905 4877 50  0000 C CNN
+F 2 "" H 6900 5050 50  0001 C CNN
+F 3 "" H 6900 5050 50  0001 C CNN
+	1    6900 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5050 6900 5000
+Wire Wire Line
+	6900 5000 7050 5000
 $EndSCHEMATC
