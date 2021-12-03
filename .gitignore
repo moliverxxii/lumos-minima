@@ -30,3 +30,6 @@ fp-info-cache
 # System files
 *.DS_Store
 
+# STM32CubeIDE
+.metadata
+microprogramme/.settings/*
